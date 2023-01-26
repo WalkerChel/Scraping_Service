@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import city
+from .models import City, Language
 
-admin.site.register(city)
+admin.site.register(City)
+admin.site.register(Language)
