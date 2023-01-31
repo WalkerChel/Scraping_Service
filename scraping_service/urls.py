@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import home, norm
+from scraping.views import home_view
+from .views import tihon
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', norm),
-    path('home/', home),
+    path('tihon/', tihon),
+    path('', home_view),
 ]

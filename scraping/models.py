@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 
-# from transliterate import translit
+from transliterate import translit
 
 class City (models.Model):
     name = models.CharField(max_length=50,
@@ -17,7 +17,7 @@ class City (models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug=slugify(self.name)   # translit(str(self.name),language_code='ru',reversed=True)
+            self.slug = translit(str(self.name), language_code='ru', reversed=True)
         super().save(*args, **kwargs)
 
 class Language(models.Model):
@@ -34,7 +34,7 @@ class Language(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.name)
+            self.slug = translit(str(self.name), language_code='ru', reversed=True)   # slugify(self.name)
         super().save(*args, **kwargs)
 
 
