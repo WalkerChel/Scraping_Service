@@ -10,4 +10,4 @@ def home(request):
     time = datetime.datetime.now().time()
     name = 'Ilya'
     _context = {'date': date, 'name': name, 'time': time}
-    return render(request, "HelloWorld.html", _context)
+    return render(request, "home", _context)
