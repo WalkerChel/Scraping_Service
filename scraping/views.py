@@ -8,5 +8,5 @@ def home_view(request):
     time = datetime.datetime.now().time()
     name = 'Ilya'
     _context = {'date': date, 'name': name, 'time': time, 'object_list': qs}
-    return render(request, 'home.html', _context)
+    return render(request, 'scraping/home.html', _context)
 
