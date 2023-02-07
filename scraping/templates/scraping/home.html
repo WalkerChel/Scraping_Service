@@ -12,7 +12,27 @@
                   <small>{{obj.timestamp|date:"j E o"}}    ({{obj.timestamptime|time:"H:i"}})</small></p>
           </div>
         </div>
+    {% empty %}
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+        <h3>К сожалению, ничего не найдено</h3><br>
+        </div>
+    </div>
+
     {% endfor %}
+<div class="row">
+    <div class="col-md-6 mx-auto">
+    <form method="GET" action="">
+        <div class="form-group">
+            {{form.as_p}}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+</div>
+
+
+
 {% endblock %}
 
 

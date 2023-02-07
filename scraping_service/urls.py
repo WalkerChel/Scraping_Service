@@ -21,5 +21,5 @@ from .views import tihon
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('tihon/', tihon),
-    path('', home_view),
+    path('home/', home_view),
 ]
